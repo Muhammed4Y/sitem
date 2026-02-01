@@ -23,12 +23,16 @@ body{
 }
 
 header{
-    padding:40px 20px;
+    padding:50px 20px;
     text-align:center;
 }
 
-header h1{font-size:2.5rem}
-header p{color:var(--muted);margin-top:8px}
+header h1{font-size:2.6rem}
+header p{
+    color:var(--muted);
+    max-width:650px;
+    margin:10px auto 0;
+}
 
 .layout{
     max-width:1200px;
@@ -42,7 +46,7 @@ header p{color:var(--muted);margin-top:8px}
 .card{
     background:var(--card);
     border-radius:16px;
-    padding:20px;
+    padding:22px;
     box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
 
@@ -51,7 +55,7 @@ header p{color:var(--muted);margin-top:8px}
     margin-bottom:12px;
 }
 
-/* SÜRÜM PANELİ */
+/* SÜRÜMLER */
 .version-list{
     display:flex;
     flex-direction:column;
@@ -103,7 +107,7 @@ th{
 
 footer{
     text-align:center;
-    padding:20px;
+    padding:25px;
     color:var(--muted);
     font-size:.85rem;
 }
@@ -113,21 +117,29 @@ footer{
 
 <header>
     <h1>Muhammed</h1>
-    <p>Projeler, sürümler ve düzenli kayıt</p>
+    <p>
+        Oyun geliştirme, küçük projeler ve
+        yapılan her değişikliği sürüm bazlı kayıt altına alma alışkanlığı.
+    </p>
 </header>
 
 <div class="layout">
 
-    <!-- SOL -->
+    <!-- TANITIM -->
     <div class="card">
-        <h2>📌 Proje Hakkında</h2>
+        <h2>👋 Tanıtım</h2>
         <p>
-            Bu sayfa projelerin sürüm bazlı değişikliklerini takip etmek için
-            hazırlanmıştır. Her yeni değişiklik bir sürüm olarak eklenir.
+            Bu site; projelerde yapılan ekleme, düzenleme ve temizliklerin
+            düzenli şekilde takip edilebilmesi için oluşturulmuş bir
+            kişisel proje günlüğüdür.
+        </p>
+        <p style="margin-top:8px;">
+            Sağ tarafta yer alan sürüm paneli, her değişikliğin
+            hangi sürümle geldiğini açıkça gösterir.
         </p>
     </div>
 
-    <!-- SAĞ / SÜRÜMLER -->
+    <!-- SÜRÜMLER -->
     <div class="card">
         <h2>🧩 Sürümler</h2>
 
@@ -144,24 +156,22 @@ footer{
                 v1.2.0 — Stabilite & Temizlik
             </button>
 
-            <!-- EKLEME -->
             <button class="version-btn" onclick="toggleVersion(3)">
-                v1.2.1 — İsim Güncellemesi
+                v1.2.1 — Küçük Düzenlemeler
             </button>
         </div>
 
-        <!-- DETAYLAR -->
         <div class="version-detail" id="version-0">
-            <p><strong>Açıklama:</strong> Projenin ilk yayınlanan sürümü.</p>
+            <p><strong>Açıklama:</strong> Projenin temel yapısı oluşturuldu.</p>
             <table>
                 <tr><th>Alan</th><th>Detay</th></tr>
                 <tr><td>Durum</td><td>Başlangıç</td></tr>
-                <tr><td>İçerik</td><td>Temel yapı</td></tr>
+                <tr><td>İçerik</td><td>İskelet yapı</td></tr>
             </table>
         </div>
 
         <div class="version-detail" id="version-1">
-            <p><strong>Açıklama:</strong> Oynanış mekanikleri geliştirildi.</p>
+            <p><strong>Açıklama:</strong> Oynanış tarafında geliştirmeler yapıldı.</p>
             <table>
                 <tr><th>Alan</th><th>Detay</th></tr>
                 <tr><td>Yeni</td><td>Toplama sistemi</td></tr>
@@ -170,31 +180,20 @@ footer{
         </div>
 
         <div class="version-detail" id="version-2">
-            <p><strong>Açıklama:</strong> Kod ve performans düzenlemeleri.</p>
+            <p><strong>Açıklama:</strong> Performans ve kod temizliği.</p>
             <table>
                 <tr><th>Alan</th><th>Detay</th></tr>
                 <tr><td>Optimizasyon</td><td>Script sadeleştirme</td></tr>
-                <tr><td>Temizlik</td><td>Gereksiz assetler silindi</td></tr>
+                <tr><td>Temizlik</td><td>Kullanılmayan assetler</td></tr>
             </table>
         </div>
 
-        <!-- SADECE EKLENEN KAYIT -->
         <div class="version-detail" id="version-3">
-            <p><strong>Açıklama:</strong> Metinsel isim güncellemesi yapıldı.</p>
+            <p><strong>Açıklama:</strong> Küçük arayüz ve metin düzenlemeleri.</p>
             <table>
                 <tr><th>Alan</th><th>Detay</th></tr>
-                <tr>
-                    <td>Değişiklik</td>
-                    <td>Yuutak Raptor → Muhammed</td>
-                </tr>
-                <tr>
-                    <td>Tür</td>
-                    <td>Versiyon notu (ekleme)</td>
-                </tr>
-                <tr>
-                    <td>Etkisi</td>
-                    <td>Fonksiyonel değişiklik yok</td>
-                </tr>
+                <tr><td>Düzenleme</td><td>Metin hizaları</td></tr>
+                <tr><td>UI</td><td>Buton boşlukları</td></tr>
             </table>
         </div>
 
@@ -202,7 +201,7 @@ footer{
 </div>
 
 <footer>
-    © 2026 — Değişiklikler kayıt altındadır.
+    © 2026 — Proje günlüğü
 </footer>
 
 <script>
